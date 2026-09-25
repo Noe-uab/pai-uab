@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pixar Animation Studios</title>
+	<style>
+		:root {
+			--ink: #171717;
+			--blue: #087ea4;
+			--line: #d8d8d8;
+		}
+
+		* { box-sizing: border-box; }
+
+		body {
+			margin: 0;
+			color: var(--ink);
+			background: white;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			min-height: 78px;
+			padding: 0 6vw;
+			border-bottom: 1px solid var(--line);
+		}
+
+		.logo {
+			color: var(--ink);
+			font-size: 1.25rem;
+			font-weight: 700;
+			letter-spacing: 0.18em;
+			text-decoration: none;
+		}
+
+		nav {
+			display: flex;
+			gap: 2rem;
+		}
+
+		nav a {
+			color: var(--ink);
+			font-size: 0.75rem;
+			font-weight: 700;
+			letter-spacing: 0.14em;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+
+		nav a:hover,
+		nav a.actiu { color: var(--blue); }
+
+		main {
+			width: min(1180px, 88vw);
+			margin: 0 auto;
+			padding: 3.5rem 0 5rem;
+		}
+
+		.presentacio {
+			display: grid;
+			grid-template-columns: 1fr 1.45fr;
+			align-items: center;
+			gap: 4rem;
+			margin-bottom: 5rem;
+		}
+
+		.presentacio h1 {
+			margin: 0 0 1.5rem;
+			font-size: clamp(2.5rem, 6vw, 5.6rem);
+			font-weight: 400;
+			letter-spacing: -0.04em;
+			line-height: 0.95;
+		}
+
+		.presentacio p {
+			max-width: 320px;
+			color: #666;
+			line-height: 1.7;
+		}
+
+		.imatge-principal,
+		.pelicula {
+			margin: 0;
+			border: 1px solid var(--line);
+			background: #f5f5f5;
+		}
+
+		.imatge-principal img,
+		.pelicula img {
+			display: block;
+			width: 100%;
+			object-fit: cover;
+		}
+
+		.imatge-principal img { height: 430px; }
+
+		figcaption {
+			padding: 0.9rem 1rem;
+			color: #555;
+			font-size: 0.75rem;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+		}
+
+		.seccio-cap {
+			display: flex;
+			align-items: baseline;
+			justify-content: space-between;
+			margin-bottom: 1.5rem;
+			border-bottom: 1px solid var(--line);
+		}
+
+		.seccio-cap h2 {
+			margin: 0 0 0.8rem;
+			font-size: 1rem;
+			font-weight: 400;
+			letter-spacing: 0.18em;
+			text-transform: uppercase;
+		}
+
+		.seccio-cap span { color: #777; font-size: 0.8rem; }
+
+		.pelicules {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1.5rem;
+		}
+
+		.pelicula {
+			color: var(--ink);
+			text-decoration: none;
+			transition: transform 180ms ease;
+		}
+
+		.pelicula:hover { transform: translateY(-5px); }
+		.pelicula img { height: 220px; }
+		.pelicula figcaption { display: flex; justify-content: space-between; }
+		.pelicula figcaption span:last-child { color: var(--blue); }
+
+		footer {
+			padding: 1.5rem 6vw;
+			border-top: 1px solid var(--line);
+			color: #777;
+			font-size: 0.75rem;
+			letter-spacing: 0.1em;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		@media (max-width: 760px) {
+			header { display: block; padding: 1.4rem 6vw; }
+			nav { flex-wrap: wrap; gap: 1rem 1.3rem; margin-top: 1.2rem; }
+			.presentacio { grid-template-columns: 1fr; gap: 2rem; margin-bottom: 3.5rem; }
+			.presentacio h1 { font-size: 3.5rem; }
+			.imatge-principal img { height: 280px; }
+			.pelicules { grid-template-columns: 1fr; }
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<a class="logo" href="treball_pixar.html">PIXAR</a>
+		<nav aria-label="Menú principal">
+			<a class="actiu" href="#films">Films</a>
+			<a href="#tecnologia">Tech</a>
+			<a href="#carreres">Carreres</a>
+			<a href="#mes">Més</a>
+		</nav>
+	</header>
+
+	<main>
+		<section class="presentacio">
+			<div>
+				<h1>Històries que ens mouen.</h1>
+				<p>Descobreix l'univers de Pixar Animation Studios a través dels seus films, personatges i mons extraordinaris.</p>
+			</div>
+			<figure class="imatge-principal">
+				<img src="https://images.unsplash.com/photo-1535016120720-40c646be5580?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" alt="Sala de cinema il·luminada">
+				<figcaption>Una mirada al cinema d'animació</figcaption>
+			</figure>
+		</section>
+
+		<section id="films">
+			<div class="seccio-cap">
+				<h2>Films destacats</h2>
+				<span>Explora les històries</span>
+			</div>
+			<div class="pelicules">
+				<a class="pelicula" href="toy-story.html">
+					<img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Joguines sobre una taula">
+					<figcaption><span>Toy Story</span><span>→</span></figcaption>
+				</a>
+				<a class="pelicula" href="inside-out.html">
+					<img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Colors i llums d'una experiència immersiva">
+					<figcaption><span>Inside Out</span><span>→</span></figcaption>
+				</a>
+				<a class="pelicula" href="coco.html">
+					<img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Paisatge nocturn amb llums càlides">
+					<figcaption><span>Coco</span><span>→</span></figcaption>
+				</a>
+			</div>
+		</section>
+	</main>
+
+	<footer id="tecnologia">Pixar Animation Studios · Creativity, technology and stories</footer>
+</body>
+</html>
